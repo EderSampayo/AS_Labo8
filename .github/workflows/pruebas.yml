@@ -1,0 +1,19 @@
+name: Pruebas de Aplicación
+
+on: 
+  push:
+    branches:
+      - '*'
+      - '!main'  # Excluye la rama main
+
+jobs:
+  tareas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+
+      - name: Realizar pruebas con pylint
+        uses: advanced-security/python-lint-code-scanning-action@v1
+        with:
+          linter: 'pylint'

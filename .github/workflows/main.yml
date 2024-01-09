@@ -43,3 +43,4 @@ jobs:
           kubectl apply -f k8s/deployment-redis.yaml
           kubectl apply -f k8s/service-redis.yaml
           kubectl apply -f k8s/service-front-web.yaml
+          kubectl rollout restart deployment front-web-deployment

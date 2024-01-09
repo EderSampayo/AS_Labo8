@@ -16,4 +16,4 @@ jobs:
       - name: Realizar pruebas con pylint
         uses: advanced-security/python-lint-code-scanning-action@v1
         with:
-          linter: 'pylint'
+          linter: pylint

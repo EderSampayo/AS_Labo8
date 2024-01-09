@@ -39,9 +39,7 @@ jobs:
         
       - name: Desplegar los objetos Kubernetes
         run: |
-          cd k8s/
-          kubectl apply -f deployment-front-web.yaml
-          kubectl apply -f deployment-redis.yaml
-          kubectl apply -f service-redis.yaml
-          kubectl apply -f service-front-web.yaml
-          cd ..
+          kubectl apply -f k8s/deployment-front-web.yaml
+          kubectl apply -f k8s/deployment-redis.yaml
+          kubectl apply -f k8s/service-redis.yaml
+          kubectl apply -f k8s/service-front-web.yaml

@@ -13,7 +13,7 @@ jobs:
       - name: Descargar codigo
         uses: actions/checkout@v4
 
-      - name: Realizar pruebas con pylint
+      - name: Escaneo de codigo
         uses: advanced-security/python-lint-code-scanning-action@v1
         with:
-          linter: 'pylint'
+          linter: pylint
